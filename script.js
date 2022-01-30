@@ -32,12 +32,12 @@
 // 5) Совершенное число
 function perfect (num) {
   let sum = 0
-  for (let i = 1; i <= num; i++) {
+  for (let i = 1; i < num; i++) {
     if (num % i === 0){
       sum += i
     }
-    if (sum === num) return 'Ваше число совершенное!'
   }
+  if (sum === num) return console.log(`Число ${num} совершенное!`)
 }
 
-console.log(perfect(6))
+perfect(6)
